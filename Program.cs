@@ -38,11 +38,19 @@ Console.WriteLine();
 int intValue = Convert.ToInt32(pos1);
 int intValue2 = Convert.ToInt32(pos2);
 
-for (int i = intValue; i <= intValue2; i++)
+int[] Method(int[] array, int timeIn, int timeOut)
 {
-    time[i] = +1;
+    for (int i = timeIn; i <= timeOut; i++)
+    {
+        array[i] += 1;
+    }
+    return array;
 }
-Print(time);
+
+int[] result = Method(time, intValue, intValue2);
+Print(result);
+
+// Print(time);
 
 // 4. Входные данные 2, конвертация строки в число, заполнение текущего массива
 string client2 = "11-13";
@@ -53,11 +61,8 @@ Console.WriteLine();
 int intV = Convert.ToInt32(p1);
 int intV2 = Convert.ToInt32(p2);
 
-for (int i = intV; i <= intV2; i++)
-{
-    time[i] = +1;
-}
-Print(time);
+int[] result2 = Method(time, intV, intV2);
+Print(result2);
 
 // 4. Входные данные 3, конвертация строки в число, заполнение текущего массива
 string client3 = "9-12";
@@ -69,11 +74,8 @@ Console.WriteLine();
 int intVa = Convert.ToInt32(po1);
 int intVa2 = Convert.ToInt32(po2);
 
-for (int i = intV; i <= intV2; i++)
-{
-    time[i] = +1;
-}
-Print(time);
+int[] result3 = Method(time, intVa, intVa2);
+Print(result3);
 
 // 5. Поиск максимального элемента
 int SearchMax(int[] time)
@@ -87,4 +89,10 @@ int SearchMax(int[] time)
     }
     return maxi;
 }
-Console.WriteLine(SearchMax(time));
+
+int finalResult = SearchMax(time) - 1;
+// Console.WriteLine(result);
+Console.Write("Максимальное количество покупателей было в промежутке ");
+Console.WriteLine($"{finalResult-1}-{finalResult}");
+
+
