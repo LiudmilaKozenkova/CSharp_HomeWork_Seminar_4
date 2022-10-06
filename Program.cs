@@ -91,7 +91,7 @@ int SearchMax(int[] time)
 }
 
 int finalResult = SearchMax(time) - 1;
-// Console.WriteLine(result);
+
 Console.Write("Максимальное количество покупателей было в промежутке ");
 Console.WriteLine($"{finalResult-1}-{finalResult}");
 
